@@ -9,7 +9,7 @@ lsp.ensure_installed({
   'rust_analyzer',
   'clangd',
   'cssls',
-  --'hls', Commented out as St Andrews lab machines cannot install it, ghcup problem?
+  'hls',
   'html',
   'bashls',
   'marksman'
