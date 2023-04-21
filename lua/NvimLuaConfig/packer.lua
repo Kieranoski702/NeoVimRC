@@ -38,6 +38,18 @@ return require('packer').startup(function(use)
         "windwp/nvim-autopairs",
         config = function() require("nvim-autopairs").setup {} end
     }
+    use 'nvim-tree/nvim-web-devicons'
+    use {
+        "folke/trouble.nvim",
+        requires = "nvim-tree/nvim-web-devicons",
+        config = function()
+            require("trouble").setup {
+                -- your configuration comes here
+                -- or leave it empty to use the default settings
+                -- refer to the configuration section below
+            }
+        end
+    }
 
     use {
         'VonHeikemen/lsp-zero.nvim',
@@ -69,6 +81,6 @@ return require('packer').startup(function(use)
             'nvim-lua/plenary.nvim',
             'nvim-telescope/telescope.nvim', -- optional
         },
-        branch = '1.x.x',            -- recommended
+        branch = '1.x.x',                    -- recommended
     }
 end)
